@@ -29,7 +29,7 @@ const Navbar = () => {
             </a>
 
             {/* Search Input (Mobile) */}
-            <div className="md:hidden flex items-center ml-2">
+            <div className="md:hidden flex items-center ml-8">
               <input
                 onClick={handleSearchResult}
                 type="text"
