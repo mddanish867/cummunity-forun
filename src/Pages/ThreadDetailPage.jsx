@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "./Navbar";
 
 const Post = ({ author, date, content, votes, isOriginalPost }) => {
   return (
@@ -29,8 +28,8 @@ const Post = ({ author, date, content, votes, isOriginalPost }) => {
             )}
           </div>
           <div className="mt-2">{content}</div>
-          <div className="mt-4 flex items-center space-x-4">
-            <button className="border border-muted-foreground px-3 py-1 rounded text-sm flex items-center">
+          <div className="mt-4 flex flex-col sm:flex-row sm:items-center sm:space-x-4">
+            <button className="border border-muted-foreground px-3 py-1 rounded text-sm flex items-center mb-2 sm:mb-0">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -47,8 +46,8 @@ const Post = ({ author, date, content, votes, isOriginalPost }) => {
               </svg>
               Upvote
             </button>
-            <span className="text-muted-foreground">{votes} votes</span>
-            <button className="border border-muted-foreground px-3 py-1 rounded text-sm flex items-center">
+            <span className="text-muted-foreground mb-2 sm:mb-0">{votes} votes</span>
+            <button className="border border-muted-foreground px-3 py-1 rounded text-sm flex items-center mb-2 sm:mb-0">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -76,10 +75,9 @@ const Post = ({ author, date, content, votes, isOriginalPost }) => {
 export default function ThreadDetailPage() {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
       <main className="max-w-4xl mx-auto py-6 sm:px-6 lg:px-8">
         <div className="px-4 py-6 sm:px-0">
-          <h1 className="text-3xl font-bold mb-6">
+          <h1 className="text-3xl font-semibold mb-6">
             Best practices for React Hooks
           </h1>
 
@@ -109,9 +107,7 @@ export default function ThreadDetailPage() {
           </div>
 
           <div className="mt-8">
-            <h2 className="text-2xl font-semibold mb-4">
-              Reply to this thread
-            </h2>
+            <h2 className="text-2xl font-semibold mb-4">Reply to this thread</h2>
             <textarea
               className="min-h-[100px] w-full p-3 border rounded-md mb-4"
               placeholder="Type your reply here..."
