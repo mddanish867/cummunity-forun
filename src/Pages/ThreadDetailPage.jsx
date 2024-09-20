@@ -30,11 +30,11 @@ const Post = ({ author, date, content, votes, isOriginalPost }) => {
           </div>
           <div className="mt-2">{content}</div>
           <div className="mt-4 flex flex-col sm:flex-row sm:items-center sm:space-x-4">
-            <button className="border border-muted-foreground px-3 py-1 rounded text-sm flex items-center mb-2 sm:mb-0">
+            <button className="px-3 py-1 rounded text-sm flex items-center mb-2 sm:mb-0">
             <ThumbsUp />
             </button>
             <span className="text-muted-foreground mb-2 sm:mb-0">{votes} votes</span>
-            <button className="border border-muted-foreground px-3 py-1 rounded text-sm flex items-center mb-2 sm:mb-0">
+            <button className=" px-3 py-1 rounded text-sm flex items-center mb-2 sm:mb-0">
             <ThumbsDown />
             </button>
             <button className="text-sm text-primary">Reply</button>
