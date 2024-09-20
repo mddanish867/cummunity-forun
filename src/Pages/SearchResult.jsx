@@ -22,7 +22,7 @@ export default function SearchResultsPage() {
         <div className="px-4 py-6 sm:px-0">
           <h1 className="text-3xl font-bold mb-6">Search Results</h1>
 
-          <div className="mb-6 flex flex-wrap gap-4">
+          <div className="mb-6 flex flex-col sm:flex-row gap-4">
             <input
               type="text"
               placeholder="Search..."
@@ -41,7 +41,7 @@ export default function SearchResultsPage() {
           </div>
 
           <div className="mb-4">
-            <div className="flex space-x-4">
+            <div className="flex flex-wrap space-x-4">
               <button className="px-4 py-2 border-b-2 border-gray-900 text-gray-900">
                 All Results
               </button>
@@ -81,8 +81,8 @@ export default function SearchResultsPage() {
             />
           </div>
 
-          <div className="mt-6 flex justify-center">
-            <button className="bg-white text-gray-800 border border-slate-200 rounded-md px-4 py-2 mr-2">
+          <div className="mt-6 flex flex-col sm:flex-row justify-center">
+            <button className="bg-white text-gray-800 border border-slate-200 rounded-md px-4 py-2 mr-2 mb-2 sm:mb-0">
               Previous
             </button>
             <button className="bg-white text-gray-800 border border-slate-200 rounded-md px-4 py-2">
