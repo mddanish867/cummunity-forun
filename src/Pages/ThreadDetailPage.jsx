@@ -1,9 +1,10 @@
 import React from "react";
+import {ThumbsUp, ThumbsDown } from "lucide-react"
 
 const Post = ({ author, date, content, votes, isOriginalPost }) => {
   return (
     <div
-      className={`bg-card text-card-foreground shadow rounded-lg p-6 mb-4 ${
+      className={`bg-card text-card-foreground shadow-sm border rounded-lg p-6 mb-4 ${
         isOriginalPost ? "border-2 border-primary" : ""
       }`}
     >
@@ -30,39 +31,11 @@ const Post = ({ author, date, content, votes, isOriginalPost }) => {
           <div className="mt-2">{content}</div>
           <div className="mt-4 flex flex-col sm:flex-row sm:items-center sm:space-x-4">
             <button className="border border-muted-foreground px-3 py-1 rounded text-sm flex items-center mb-2 sm:mb-0">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                className="w-4 h-4 mr-1"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M5 15l7-7 7 7"
-                />
-              </svg>
-              Upvote
+            <ThumbsUp />
             </button>
             <span className="text-muted-foreground mb-2 sm:mb-0">{votes} votes</span>
             <button className="border border-muted-foreground px-3 py-1 rounded text-sm flex items-center mb-2 sm:mb-0">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                className="w-4 h-4 mr-1"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-              Downvote
+            <ThumbsDown />
             </button>
             <button className="text-sm text-primary">Reply</button>
           </div>

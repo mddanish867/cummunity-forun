@@ -5,29 +5,17 @@ const LeaderboardTable = ({ data }) => (
     <table className="min-w-full table-auto border-collapse">
       <thead>
         <tr className="bg-gray-100 border-b">
-          <th className="p-4 text-left text-sm font-medium text-gray-700">
-            Rank
-          </th>
-          <th className="p-4 text-left text-sm font-medium text-gray-700">
-            User
-          </th>
-          <th className="p-4 text-left text-sm font-medium text-gray-700">
-            Posts
-          </th>
-          <th className="p-4 text-left text-sm font-medium text-gray-700">
-            Likes
-          </th>
-          <th className="p-4 text-left text-sm font-medium text-gray-700">
-            Joined
-          </th>
+          <th className="p-4 text-left text-sm font-medium text-gray-700">Rank</th>
+          <th className="p-4 text-left text-sm font-medium text-gray-700">User</th>
+          <th className="p-4 text-left text-sm font-medium text-gray-700">Posts</th>
+          <th className="p-4 text-left text-sm font-medium text-gray-700">Likes</th>
+          <th className="p-4 text-left text-sm font-medium text-gray-700">Joined</th>
         </tr>
       </thead>
       <tbody>
         {data.map((user, index) => (
           <tr key={user.id} className="border-b">
-            <td className="p-4 text-sm text-gray-900 font-medium">
-              {index + 1}
-            </td>
+            <td className="p-4 text-sm text-gray-900 font-medium">{index + 1}</td>
             <td className="p-4 text-sm text-gray-900">{user.name}</td>
             <td className="p-4 text-sm text-gray-900">{user.posts}</td>
             <td className="p-4 text-sm text-gray-900">{user.likes}</td>
@@ -41,12 +29,12 @@ const LeaderboardTable = ({ data }) => (
 
 const Tabs = ({ tabs, selectedTab, onSelect }) => (
   <div>
-    <div className="flex space-x-4 mb-4">
+    <div className="flex space-x-4 mb-4 flex-wrap">
       {tabs.map((tab) => (
         <button
           key={tab.value}
           onClick={() => onSelect(tab.value)}
-          className={`px-4 py-2  ${
+          className={`px-4 py-2 ${
             selectedTab === tab.value
               ? "bg-white border-b border-gray-950 text-gray-500"
               : "bg-white text-gray-500"
@@ -67,20 +55,8 @@ export default function LeaderboardPage() {
     { id: 1, name: "John Doe", posts: 1234, likes: 5678, joined: "Jan 2022" },
     { id: 2, name: "Jane Smith", posts: 987, likes: 4321, joined: "Mar 2022" },
     { id: 3, name: "Bob Johnson", posts: 567, likes: 2345, joined: "May 2022" },
-    {
-      id: 4,
-      name: "Alice Williams",
-      posts: 321,
-      likes: 1234,
-      joined: "Jul 2022",
-    },
-    {
-      id: 5,
-      name: "Charlie Brown",
-      posts: 159,
-      likes: 753,
-      joined: "Sep 2022",
-    },
+    { id: 4, name: "Alice Williams", posts: 321, likes: 1234, joined: "Jul 2022" },
+    { id: 5, name: "Charlie Brown", posts: 159, likes: 753, joined: "Sep 2022" },
   ];
 
   const tabs = [
