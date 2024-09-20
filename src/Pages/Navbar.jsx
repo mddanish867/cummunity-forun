@@ -34,7 +34,7 @@ const Navbar = () => {
                 onClick={handleSearchResult}
                 type="text"
                 placeholder="Search..."
-                className="w-40 px-2 py-1 border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-orange-400"
+                className="w-full px-2 py-1 border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-orange-400"
               />
             </div>
 
