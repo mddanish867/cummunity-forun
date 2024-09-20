@@ -7,7 +7,7 @@ export default function LoginRegistrationPage() {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+      <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="max-w-md w-full">
           {/* Tabs List */}
           <div className="grid grid-cols-2 border-b border-gray-200">
