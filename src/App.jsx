@@ -7,7 +7,7 @@ import SettingsPage from "./Pages/SettingsPage";
 import LoginRegistrationPage from "./Pages/LoginRegister";
 import AdminDashboard from "./Pages/AdminDashboard";
 import ModerationPanel from "./Pages/ModerationPanel";
-import NotificationsPage from "./Pages/NotificationItem";
+import NotificationsPage from "./Pages/NotificationPage";
 import SearchResultsPage from "./Pages/SearchResult";
 function App() {
   return (

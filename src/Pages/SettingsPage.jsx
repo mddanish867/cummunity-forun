@@ -40,7 +40,7 @@ export default function SettingsPage() {
           <h1 className="text-3xl font-bold mb-6">Settings</h1>
 
           <div className="mb-4 border-b border-gray-200">
-            <nav className="flex space-x-4">
+            <nav className="flex flex-wrap sm:space-x-4 space-y-2 sm:space-y-0">
               <button
                 className={`px-3 py-2 font-medium text-sm ${
                   activeTab === "account"
@@ -83,13 +83,13 @@ export default function SettingsPage() {
               </button>
               <button
                 className={`px-3 py-2 font-medium text-sm ${
-                  activeTab === "leaderborad"
+                  activeTab === "leaderboard"
                     ? "text-gray-900 border-b-2 border-gray-900"
                     : "text-gray-500"
                 }`}
-                onClick={() => handleTabChange("leaderborad")}
+                onClick={() => handleTabChange("leaderboard")}
               >
-                Leaderborad
+                Leaderboard
               </button>
             </nav>
           </div>
@@ -199,8 +199,9 @@ export default function SettingsPage() {
               </div>
             </div>
           )}
+
           {activeTab === "groups" && <UserGroupsPage />}
-          {activeTab === "leaderborad" && <LeaderboardPage />}
+          {activeTab === "leaderboard" && <LeaderboardPage />}
           {activeTab === "privacy" && (
             <div>
               <div className="bg-white shadow sm:rounded-lg p-6">

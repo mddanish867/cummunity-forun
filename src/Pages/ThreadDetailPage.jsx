@@ -1,5 +1,5 @@
 import React from "react";
-import {ThumbsUp, ThumbsDown } from "lucide-react"
+import { ThumbsUp, ThumbsDown } from "lucide-react";
 
 const Post = ({ author, date, content, votes, isOriginalPost }) => {
   return (
@@ -29,13 +29,13 @@ const Post = ({ author, date, content, votes, isOriginalPost }) => {
             )}
           </div>
           <div className="mt-2">{content}</div>
-          <div className="mt-4 flex flex-col sm:flex-row sm:items-center sm:space-x-4">
-            <button className="px-3 py-1 rounded text-sm flex items-center mb-2 sm:mb-0">
-            <ThumbsUp />
+          <div className="mt-4 flex flex-row items-center space-x-4">
+            <button className="px-3 py-1 rounded text-sm flex items-center">
+              <ThumbsUp />
             </button>
-            <span className="text-muted-foreground mb-2 sm:mb-0">{votes} votes</span>
-            <button className=" px-3 py-1 rounded text-sm flex items-center mb-2 sm:mb-0">
-            <ThumbsDown />
+            <span className="text-muted-foreground">{votes} votes</span>
+            <button className="px-3 py-1 rounded text-sm flex items-center">
+              <ThumbsDown />
             </button>
             <button className="text-sm text-primary">Reply</button>
           </div>
@@ -80,7 +80,9 @@ export default function ThreadDetailPage() {
           </div>
 
           <div className="mt-8">
-            <h2 className="text-2xl font-semibold mb-4">Reply to this thread</h2>
+            <h2 className="text-2xl font-semibold mb-4">
+              Reply to this thread
+            </h2>
             <textarea
               className="min-h-[100px] w-full p-3 border rounded-md mb-4"
               placeholder="Type your reply here..."

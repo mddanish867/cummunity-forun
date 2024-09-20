@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
-import NotificationItem from "./NotificationItem"; // Assume this is the same component
+import NotificationItem from "./NotificationPage"; // Assume this is the same component
 
 const Switch = ({ isChecked, onChange }) => (
   <button
